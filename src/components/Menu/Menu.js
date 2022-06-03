@@ -1,8 +1,9 @@
+import '../Navbar/Navbar.css'
 import CartWichest from '../CartWichest/CartWichest'
 
 const Menu = (props) => {
     return(
-         <nav> 
+         <nav className="navbar"> 
             <ul>
                 <CartWichest/>
                 {/*<img src={Digital} alt="logo"/>*/}

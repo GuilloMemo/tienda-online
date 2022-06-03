@@ -5,11 +5,11 @@ import Audifonos from '../img/Audifonos.png'
 const Clasificados = ({contentUno, contentDos, contentTres}) => {
     return (
         <div>
-            <img src={Celular}/>
+            <img classNme="dos" src={Celular}/>
             <p>{contentUno}</p>
-            <img src={Computador}/>
+            <img classNme="dos" src={Computador}/>
             <p>{contentDos}</p>
-            <img src={Audifonos}/>
+            <img classNme="dos" src={Audifonos}/>
             <p>{contentTres}</p>
         </div>
     )
