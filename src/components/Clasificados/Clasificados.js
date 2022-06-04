@@ -5,7 +5,7 @@ import Audifonos from '../img/Audifonos.png'
 const Clasificados = ({contentUno, contentDos, contentTres}) => {
     return (
         
-        <div style={{}}>
+        <div style={{border: "solid" }}>
             <img style={{height: 100, width: 100, display: "inline-flex"}} src={Celular}/>
             <p style={{display: "inline-flex"}}>{contentUno}</p>
             <img style={{height: 100, width: 100}} src={Computador}/>
