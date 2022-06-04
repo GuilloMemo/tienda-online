@@ -5,7 +5,7 @@ const Menu = (props) => {
     return(
          <nav className="navbar"> 
             <ul>
-                <CartWichest/>
+                <CartWichest style={{ height: 60, width: 60, borderRadius: 50, marginRight: 20}}/>
                 {/*<img src={Digital} alt="logo"/>*/}
                 <li><a>{props.inicio}</a></li>
                 <li><a>{props.computadores}</a></li>
