@@ -10,6 +10,6 @@ const ItemDetail = ({id, imagen, categoria, nombre, precio, cantidad, descripcio
             <p>{descripcion}</p>
         </>
     )
-}
+} 
 
 export default ItemDetail
