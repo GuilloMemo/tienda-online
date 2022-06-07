@@ -1,18 +1,28 @@
 import { useState, useEffect } from 'react'
-import { llamarProductos } from '../../asyncmock'
+import { llamarProductos, llamarProductosByCategory } from '../../asyncmock'
 import ItemList from '../ItemList/ItemList'
 import '../ItemListContent/ItemListContent.css'
+import { useParams } from 'react-router-dom'
 
 const ItemListContainer = (props) => {
+
+    const { categoryId } = useParams()
 
     const [productos, setProductos] = useState([])
 
     useEffect(() => {
-        llamarProductos()
-        .then(response => {
-            setProductos(response)
-        })
-    }, [])
+        if(!categoryId){
+            llamarProductos()
+            .then(prod => {
+                setProductos(prod)
+            }).catch(error => {console.log(error)})
+        }else{
+            llamarProductosByCategory(categoryId)
+            .then(prod => {
+                setProductos(prod)
+            }).catch(error => {console.log(error)}) 
+        }
+    }, [categoryId])
 
     console.log(productos)
 
@@ -20,7 +30,8 @@ const ItemListContainer = (props) => {
         <>
         <h1>{props.promision}</h1>
             <div className="contenedor">
-                <ItemList productos={productos}/>
+                {productos.length > 0 ?<ItemList productos={productos}/>
+                :'No component'}
             </div>
         </>
     )
