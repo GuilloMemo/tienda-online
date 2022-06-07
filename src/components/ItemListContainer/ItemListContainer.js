@@ -31,7 +31,7 @@ const ItemListContainer = (props) => {
         <h1>{props.promision}</h1>
             <div className="contenedor">
                 {productos.length > 0 ?<ItemList productos={productos}/>
-                :'No component'}
+                :<h1>No component</h1>}
             </div>
         </>
     )
