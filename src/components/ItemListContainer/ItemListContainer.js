@@ -6,25 +6,39 @@ import { useParams } from 'react-router-dom'
 
 const ItemListContainer = (props) => {
 
-    const { categoryId } = useParams()
-
     const [productos, setProductos] = useState([])
 
+    const [loading, setLoading] = useState(true)
+
+    const { categoryId } = useParams()
+
     useEffect(() => {
+        setLoading(true)
+        
         if(!categoryId){
             llamarProductos()
-            .then(prod => {
-                setProductos(prod)
+            .then(prods => {
+                setProductos(prods)
             }).catch(error => {console.log(error)})
+            .finally(() => {
+                setLoading(false)
+            })
         }else{
             llamarProductosByCategory(categoryId)
-            .then(prod => {
-                setProductos(prod)
+            .then(prods => {
+                setProductos(prods)
             }).catch(error => {console.log(error)}) 
+            .finally(() => {
+                setLoading(false)
+            })
         }
     }, [categoryId])
 
     console.log(productos)
+
+    if(loading){
+        return <h3>CARGANDO...</h3>
+    }
 
     return(
         <>

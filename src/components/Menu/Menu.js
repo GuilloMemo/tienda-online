@@ -1,6 +1,6 @@
 import '../Navbar/Navbar.css'
 import CartWichest from '../CartWichest/CartWichest'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Menu = (props) => {
    
@@ -9,12 +9,12 @@ const Menu = (props) => {
             <ul>
                 <CartWichest/>
                 {/*<img src={Digital} alt="logo"/>*/}
-                <Link to='/'><li><a>{props.inicio}</a></li></Link>
-                <Link to='/category/computadores'><li><a>{props.computadores}</a></li></Link>
-                <Link to='/category/celulares'><li><a>{props.celulares}</a></li></Link>
-                <Link to='/category/accesorios'><li><a>{props.accesorios}</a></li></Link>
-                <li><a>{props.nosotros}</a></li>
-                <li><a>{props.contacto}</a></li>
+                <NavLink to='/' className={({isActive}) => 'isActive' ? 'activar' : 'noActivar'}><li><a>{props.inicio}</a></li></NavLink>
+                <NavLink to='/category/computadores' className={({isActive}) => 'isActive' ? 'activar' : 'noActivar'}><li><a>{props.computadores}</a></li></NavLink>
+                <NavLink to='/category/celulares' className={({isActive}) => 'isActive' ? 'activar' : 'noActivar'}><li><a>{props.celulares}</a></li></NavLink>
+                <NavLink to='/category/accesorios'className={({isActive}) => 'isActive' ? 'activar' : 'noActivar'}><li><a>{props.accesorios}</a></li></NavLink>
+                <li style={{paddingTop: 20 }}><a>{props.nosotros}</a></li>
+                <li style={{paddingTop: 20 }}><a>{props.contacto}</a></li>
             </ul>
          </nav>
     )
