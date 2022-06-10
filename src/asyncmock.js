@@ -23,7 +23,7 @@ const productos = [
     {
         id: '456',
         nombre: 'Celular Kalley',
-        categoria: 'Smartphone',
+        categoria: 'Celulares',
         precio: '$1.115.000',
         imagen: 'https://cdn.pixabay.com/photo/2014/08/05/10/30/iphone-410324_960_720.jpg',
         cantidad: 'Cantidad 5 unidades',

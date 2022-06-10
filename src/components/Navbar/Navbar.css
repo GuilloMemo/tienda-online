@@ -23,11 +23,14 @@ ul{
     display: flex;
     margin: 10px;
     padding: 5px;
+    text-decoration: none;
   }
 .noActivar{
     display: flex;
     margin: 10px;
     padding: 5px;
     color: blueviolet;
+    text-decoration: none;
+    transition-delay: 2s;
   }
   

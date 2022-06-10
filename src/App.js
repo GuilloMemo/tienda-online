@@ -13,6 +13,7 @@ function App() {
       <header>
         <BrowserRouter>
         <Menu inicio='INICIO' computadores='COMPUTADORES' celulares='CELULARES'accesorios='ACCESORIOS' nosotros='NOSOTROS' contacto='CONTACTO'/>
+        <InerContert title='Bienvenidos' parrafo='Este es un espacio para comprar productos de alta tecnologia y abarcar todos los rincones del planeta'/>
           <Routes>
             <Route path='/' element={<ItemListContainer promision='Promociones'/>}/>
             <Route path='/category/:categoryId' element={<ItemListContainer promision='Promociones'/>}/>
@@ -20,7 +21,7 @@ function App() {
           </Routes>
         </BrowserRouter>
         
-        <InerContert title='Bienvenidos' parrafo='Este es un espacio para comprar productos de alta tecnologia y abarcar todos los rincones del planeta'/>
+        
         <Clasificados contentUno = 'Celulares de baja y Alta Gama' contentDos = 'Computadores Personales y de Escritorio' contentTres = 'Toda Clase de Accesorios de Tecnologia'/>      
         {/*<ItemListContainer promision='Promociones'/>*/}
         {/*<ItemDetailContainer />*/}
