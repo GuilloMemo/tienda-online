@@ -1,4 +1,11 @@
+import Counter from "../Counter/Counter"
+
 const ItemDetail = ({id, imagen, categoria, nombre, precio, cantidad, descripcion}) => {
+
+    const handleOnAdd = (quality) => {
+        console.log(`Se Agrego ${quality} ${nombre}`)
+    }
+
     return (
         <>
             <h2>Card de Detalle</h2>
@@ -8,6 +15,7 @@ const ItemDetail = ({id, imagen, categoria, nombre, precio, cantidad, descripcio
             <p>{precio}</p>
             <p>{cantidad}</p>
             <p>{descripcion}</p>
+            <Counter onAdd={handleOnAdd} initial={0} stock={12} />   
         </>
     )
 } 
