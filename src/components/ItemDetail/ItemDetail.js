@@ -1,9 +1,17 @@
-import Counter from "../Counter/Counter"
+import { useContext } from 'react';
+import Counter from '../Counter/Counter';
+import { Context } from '../../App';
 
-const ItemDetail = ({id, imagen, categoria, nombre, precio, cantidad, descripcion}) => {
+
+const ItemDetail = ({id, imagen, categoria, nombre, precio, cantidad, descripcion }) => {
+
+    const {cart, setCart} = useContext(Context)
+
 
     const handleOnAdd = (quality) => {
         console.log(`Se Agrego ${quality} ${nombre}`)
+
+        setCart([...cart, {id, nombre, precio, cantidad}])
     }
 
     return (

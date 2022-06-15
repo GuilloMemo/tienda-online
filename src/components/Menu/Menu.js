@@ -1,5 +1,6 @@
 import '../Navbar/Navbar.css'
 import CartWichest from '../CartWichest/CartWichest'
+import CartWichesDos from '../CartWichesDos/CartWichesDos'
 import { Link, NavLink } from 'react-router-dom'
 
 const Menu = (props) => {
@@ -15,6 +16,7 @@ const Menu = (props) => {
                 <NavLink to='/category/Accesorios'className={({isActive}) => 'isActive' ? 'activar' : 'noActivar'}><li><a>{props.accesorios}</a></li></NavLink>
                 <li style={{paddingTop: 20 }}><a>{props.nosotros}</a></li>
                 <li style={{paddingTop: 20 }}><a>{props.contacto}</a></li>
+                <button style={{width: 80, height: 100, paddingTop: 5, backgroundColor: 'aqua'}}><CartWichesDos />0</button>
             </ul>
          </nav>
     )
