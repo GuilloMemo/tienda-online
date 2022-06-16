@@ -1,7 +1,15 @@
+import { useContext } from "react"
+import CardContext from "../context/CardContext"
+
 const CartWichesDos = () => {
+
+    const { getCartCantidad } = useContext(CardContext)
+
+    const totalCantidad = getCartCantidad()
+
     return (
         <div>
-            <img  sytle={{ width: 20, height: 20 }} src="imagenes/carrito.jpg" alt="logo"/>
+            <button style={{width: 80, height: 100, paddingTop: 5, backgroundColor: 'aqua'}}><img  sytle={{ width: 20, height: 20 }} src="imagenes/carrito.jpg" alt="logo"/>{totalCantidad}</button>
         </div>
     )
 

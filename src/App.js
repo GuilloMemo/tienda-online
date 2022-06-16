@@ -7,16 +7,15 @@ import Clasificados from './components/Clasificados/Clasificados';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { CardProvider } from './context/CardContext';
 
- export const Context = createContext()
+ 
 
 function App() {
 
-const [cart, setCart] = useState([])
-
   return (
     <div className="App">
-      <Context.Provider  value={{ cart, setCart }}>
+      <CardProvider>
         <header>
           <BrowserRouter>
           <Menu inicio='INICIO' computadores='COMPUTADORES' celulares='CELULARES'accesorios='ACCESORIOS' nosotros='NOSOTROS' contacto='CONTACTO'/>
@@ -25,6 +24,7 @@ const [cart, setCart] = useState([])
               <Route path='/' element={<ItemListContainer promision='Promociones'/>}/>
               <Route path='/category/:categoryId' element={<ItemListContainer promision='Promociones'/>}/>
               <Route path='/detail/:productId' element={<ItemDetailContainer />}/>
+              <Route path='/cart' element={<h1>CARD</h1>}/>
             </Routes>
           </BrowserRouter>
           
@@ -33,7 +33,7 @@ const [cart, setCart] = useState([])
           {/*<ItemListContainer promision='Promociones'/>*/}
           {/*<ItemDetailContainer />*/}
         </header>
-      </Context.Provider>
+        </CardProvider>
     </div>
   );
 }
