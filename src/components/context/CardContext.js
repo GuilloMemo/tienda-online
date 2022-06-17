@@ -21,7 +21,7 @@ const remoeItem = (id) => {
 }
 
 const isInCart = (id) => {
-    return cart.some(prod => prod.id === productToAdd.id)
+    return cart.some(prod => prod.id === id)
 }
 
 const getCartCantidad = () => {
