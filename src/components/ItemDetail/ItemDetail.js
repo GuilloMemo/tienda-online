@@ -1,6 +1,6 @@
 import { useState, useContext } from 'react';
 import Counter from '../Counter/Counter';
-import CardContext from '../context/CardContext';
+import CardContext from '../../context/CardContext';
 import { Link } from 'react-router-dom';
 
 

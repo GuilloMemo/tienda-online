@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import CardContext from "../context/CardContext"
+import CardContext from "../../context/CardContext"
 
 const CartWichesDos = () => {
 
