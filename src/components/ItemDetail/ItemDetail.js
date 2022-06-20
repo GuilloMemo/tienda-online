@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const ItemDetail = ({id, imagen, categoria, nombre, precio, cantidad, descripcion }) => {
 
-    const {cantidadAdded, setcantidadAdded} = useState(0)
+    const [cantidadAdded, setcantidadAdded] = useState(0)
 
     const {addItem} = useContext(CardContext)
 
@@ -14,9 +14,9 @@ const ItemDetail = ({id, imagen, categoria, nombre, precio, cantidad, descripcio
     const handleOnAdd = (quality) => {
         console.log(`Se Agrego ${quality} ${nombre}`)
 
-        addItem({id, nombre, precio, cantidad})
+        addItem({id, nombre, precio, quality})
 
-        setcantidadAdded(cantidad)
+        setcantidadAdded(quality)
     }
 
     return (
