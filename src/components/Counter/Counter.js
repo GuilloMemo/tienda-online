@@ -32,23 +32,20 @@ const Counter = ({onAdd, initial, stock}) => {
         
         }
     }
-    const reset = () => {
-        setCount(initial)
-       
-    }
+   
     console.log("antes del montaje y cada rerender (actualizacion)")
 
     return(
-        <div style={{display: 'flex', marginLeft: '40%', paddingBottom: 30}}>
+        <div style={{display: 'flex', marginLeft: '42%', paddingBottom: 30}}>
             {/*<button>-</button>*/}
-            <button style={{height: 20, width: 20, marginTop: 28}} onClick = {decrement}>-</button>
+            <button style={{height: 20, width: 20, marginTop: 28, backgroundColor: 'aqua'}} onClick = {decrement}>-</button>
             {/*<Button handleClick = {() => console.log('restar')} label='-'/>*/}
             {/*<h2>{props.initial}</h2>*/}
-            <button onClick={() => onAdd(count)} style={{height: 20, width: 30, marginTop: 28}}>{count}</button>
+            <button onClick={() => onAdd(count)} style={{height: 20, width: 30, marginTop: 28, backgroundColor: 'aqua'}}>{count}</button>
             {/*<button onClick ={props.sumarIncrement}>+</button>*/}
-            <button style={{height: 20, width: 20, marginTop: 28}}  onClick={increment}>+</button>
+            <button style={{height: 20, width: 20, marginTop: 28, backgroundColor: 'aqua'}}  onClick={increment}>+</button>
             {/*<Button handleClick = {() => console.log('sumar')} label='+'/>*/}
-            <button style={{height: 20, marginTop: 28}} onClick={reset}>reset</button>
+            <button style={{height: 20, marginTop: 28, backgroundColor: 'aqua'}} onClick={increment}>Agregar al Carrito</button>
         </div>
     )
 }

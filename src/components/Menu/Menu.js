@@ -10,12 +10,12 @@ const Menu = (props) => {
             <ul>
                 <CartWichest/>
                 {/*<img src={Digital} alt="logo"/>*/}
-                <NavLink to='/' className={({isActive}) => 'isActive' ? 'activar' : 'noActivar'}><li><a>{props.inicio}</a></li></NavLink>
-                <NavLink to='/category/Computadores' className={({isActive}) => 'isActive' ? 'activar' : 'noActivar'}><li><a>{props.computadores}</a></li></NavLink>
-                <NavLink to='/category/Celulares' className={({isActive}) => 'isActive' ? 'activar' : 'noActivar'}><li><a>{props.celulares}</a></li></NavLink>
-                <NavLink to='/category/Accesorios'className={({isActive}) => 'isActive' ? 'activar' : 'noActivar'}><li><a>{props.accesorios}</a></li></NavLink>
-                <li style={{paddingTop: 20 }}><a>{props.nosotros}</a></li>
-                <li style={{paddingTop: 20 }}><a>{props.contacto}</a></li>
+                <NavLink to='/' className={({isActive}) => 'isActive' ? 'activar' : 'noActivar'}><li>{props.inicio}</li></NavLink>
+                <NavLink to='/category/Computadores' className={({isActive}) => 'isActive' ? 'activar' : 'noActivar'}><li>{props.computadores}</li></NavLink>
+                <NavLink to='/category/Celulares' className={({isActive}) => 'isActive' ? 'activar' : 'noActivar'}><li>{props.celulares}</li></NavLink>
+                <NavLink to='/category/Accesorios'className={({isActive}) => 'isActive' ? 'activar' : 'noActivar'}><li>{props.accesorios}</li></NavLink>
+                <li style={{paddingTop: 20 }}>{props.nosotros}</li>
+                <li style={{paddingTop: 20 }}>{props.contacto}</li>
                 <CartWichesDos />
             </ul>
          </nav>

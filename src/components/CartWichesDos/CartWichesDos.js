@@ -9,7 +9,7 @@ const CartWichesDos = () => {
 
     return (
         <div>
-            <button style={{width: 80, height: 100, paddingTop: 5, backgroundColor: 'aqua'}}><img  sytle={{ width: 20, height: 20 }} src="imagenes/carrito.jpg" alt="logo"/>{totalCantidad}</button>
+            <button style={{width: 80, height: 100, paddingTop: 5, backgroundColor: 'aqua', marginLeft: 10}}><img  sytle={{ width: 20, height: 20 }} src="imagenes/carrito.jpg" alt="logo"/>{totalCantidad}</button>
         </div>
     )
 
