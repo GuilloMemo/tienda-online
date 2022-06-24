@@ -27,7 +27,7 @@ const isInCart = (id) => {
 const getCartCantidad = () => {
     let totalCantidad = 0
     cart.forEach(prod => {
-        totalCantidad += prod.cantidad
+        totalCantidad += prod.quality
     })
 
     return totalCantidad

@@ -4,7 +4,7 @@ import '../InerContainer/InerContainer.css'
 const InerContert = ({title, parrafo}) => {
     return (
         <div>
-            <img classNme="uno" src={Iner}/>
+            <img className="uno" src={Iner}/>
             <h2>{title}</h2>
             <p>{parrafo}</p>
         </div>

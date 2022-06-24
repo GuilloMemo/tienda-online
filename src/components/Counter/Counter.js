@@ -41,11 +41,11 @@ const Counter = ({onAdd, initial, stock}) => {
             <button style={{height: 20, width: 20, marginTop: 28, backgroundColor: 'aqua'}} onClick = {decrement}>-</button>
             {/*<Button handleClick = {() => console.log('restar')} label='-'/>*/}
             {/*<h2>{props.initial}</h2>*/}
-            <button onClick={() => onAdd(count)} style={{height: 20, width: 30, marginTop: 28, backgroundColor: 'aqua'}}>{count}</button>
+            <button style={{height: 20, width: 30, marginTop: 28, backgroundColor: 'aqua'}}>{count}</button>
             {/*<button onClick ={props.sumarIncrement}>+</button>*/}
             <button style={{height: 20, width: 20, marginTop: 28, backgroundColor: 'aqua'}}  onClick={increment}>+</button>
             {/*<Button handleClick = {() => console.log('sumar')} label='+'/>*/}
-            <button style={{height: 20, marginTop: 28, backgroundColor: 'aqua'}} onClick={increment}>Agregar al Carrito</button>
+            <button onClick={() => onAdd(count)} style={{height: 20, marginTop: 28, backgroundColor: 'aqua'}}>Agregar al Carrito</button>
         </div>
     )
 }
