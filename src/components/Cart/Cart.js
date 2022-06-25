@@ -9,11 +9,11 @@ const Cart = () => {
     const total = getTotal()
 
     if(loading) {
-        return <h1>Se esta generando su orden...</h1>
+        return <h1>Se esta generando su orden</h1>
     }
 
     if(totalCantidad === 0) {
-        return <h1>No hay productos en el carrito</h1>
+        return <h1>No hay productos</h1>
     }
 
     return (
@@ -23,7 +23,6 @@ const Cart = () => {
             <h3>Total: ${total}</h3>
             <button onClick={() => clearCart()} className="Button">Limpiar carrito</button>
             <button onClick={handleCreateOrder} className="Button">Generar Orden</button>
-            {/* <button onClick={handleUpdateStock} className="Button">Stock 1000</button> */}
         </>
     )
 }
