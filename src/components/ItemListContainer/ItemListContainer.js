@@ -3,7 +3,7 @@ import { llamarProductos, llamarProductosByCategory } from '../../asyncmock'
 import ItemList from '../ItemList/ItemList'
 import '../ItemListContent/ItemListContent.css'
 import { useParams } from 'react-router-dom'
-import { getDocs, collection } from 'firebase/firestore'
+import { getDocs, collection, query, where } from 'firebase/firestore'
 import { db } from '../../services/firebase'
 
 const ItemListContainer = (props) => {
@@ -16,8 +16,11 @@ const ItemListContainer = (props) => {
 
     useEffect(() => {
         setLoading(true)
+        const colleccionRef = categoryId ? (
+            query(collection(db, 'productos'), where('category', '==', categoryId))
+        ) : (collection(db, 'productos'))
 
-        getDocs(collection(db, 'productos')).then(response => {
+        getDocs(colleccionRef).then(response => {
             console.log(response)
             const productsFormatted = response.docs.map(doc => {
                 return { id: doc.id, ...doc.data() }

@@ -16,7 +16,7 @@ const Menu = (props) => {
                 <NavLink to='/category/Accesorios'className={({isActive}) => 'isActive' ? 'activar' : 'noActivar'}><li>{props.accesorios}</li></NavLink>
                 <li style={{paddingTop: 20 }}>{props.nosotros}</li>
                 <li style={{paddingTop: 20 }}>{props.contacto}</li>
-                <CartWichesDos />
+                <button style={{width: 80, height: 100, paddingTop: 5, backgroundColor: 'aqua', marginLeft: 10}}><CartWichesDos /></button>
             </ul>
          </nav>
     )
