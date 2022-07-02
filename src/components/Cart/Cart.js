@@ -19,10 +19,9 @@ const Cart = () => {
     return (
         <>
             <h1>Cart</h1>
-            <CartItemList productsAdded={cart}/>
+            <CartItemList cantidadAdded={cart}/>
             <h3>Total: ${total}</h3>
             <button onClick={() => clearCart()} className="Button">Limpiar carrito</button>
-            <button onClick={handleCreateOrder} className="Button">Generar Orden</button>
         </>
     )
 }
