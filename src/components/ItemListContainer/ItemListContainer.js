@@ -10,7 +10,9 @@ const ItemListContainer = (props) => {
 
     const [productos, setProductos] = useState([])
 
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
+
+    const [title, setTitle] = useState('Bienvenidos')
 
     const { categoryId } = useParams()
 
@@ -52,7 +54,11 @@ const ItemListContainer = (props) => {
         //}
     }, [categoryId])
 
-    console.log(productos)
+    useEffect(() => {
+        setTimeout(() => {
+            setTitle('Estos son nuestros productos')
+        },2000)
+    },[])
 
     if(loading){
         return <h3>CARGANDO...</h3>
